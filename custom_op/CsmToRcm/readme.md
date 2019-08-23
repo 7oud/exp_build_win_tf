@@ -23,6 +23,7 @@ __gpu部分__
 	[sizeof Eigen::Index depends on system](http://www.alecjacobson.com/weblog/?p=4745)</br>
 	[EIGEN_DEFAULT_DENSE_INDEX_TYPE explication](https://stackoverflow.com/questions/39685899/overload-resolution-of-eigens-operator-when-wrapping-it-with-boost-python/39691267#39691267)</br>
 	[CUDA kernel can't support 8*8 eigen matrix assignment?](https://stackoverflow.com/questions/57504283/cuda-kernel-cant-support-88-eigen-matrix-assignment)</br>
+	[cuda documentation about 'error: asm operand type size(1) does not match type/size implied by constraint 'r''](https://docs.nvidia.com/cuda/inline-ptx-assembly/index.html#incorrect-ptx)</br>
 * Cuda内核似乎不支持复数矩阵求逆的操作（待核实）
 * 发现eigen矩阵运算会占用cuda线程，kernel内部矩阵运算操作越多，可用的cuda线程就越少，解决方案为循环调用线程
 * eigen延迟运算机制导致一些操作如果没有输出赋值，则该操作将不会被运算（如inverse，dot等）
