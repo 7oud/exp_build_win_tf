@@ -3,6 +3,10 @@
 - [csdn](https://blog.csdn.net/qq_37674858/article/details/81095101)
 - [csdn](https://blog.csdn.net/luanpeng825485697/article/details/81152615)
 - [csdn](https://blog.csdn.net/shuzfan/article/details/78516542)
+- [jianshu](https://www.jianshu.com/p/d46596558640)
+- [cnblogs](https://www.cnblogs.com/seniusen/p/9756302.html)
+- [cnblogs](https://www.cnblogs.com/seniusen/p/9756481.html)
+- [others](http://www.manongjc.com/article/114533.html)
 
 
 ```
