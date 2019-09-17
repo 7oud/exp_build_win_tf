@@ -1,0 +1,27 @@
+## link
+- [official](https://tensorflow.google.cn/install/source)
+- [csdn](https://blog.csdn.net/qq_37674858/article/details/81095101)
+- [csdn](https://blog.csdn.net/luanpeng825485697/article/details/81152615)
+- [csdn](https://blog.csdn.net/shuzfan/article/details/78516542)
+
+
+```
+# build pip package
+bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
+./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+
+# build cc library
+bazel build --config=opt --config=cuda //tensorflow:libtensorflow_cc.so
+
+# build c library
+bazel build --config=opt --config=cuda //tensorflow:libtensorflow.so
+
+```
+
+## problem
+
+## config
+- monolithic meaning?
+
+### build pip package
+- tf.Session() was failed
