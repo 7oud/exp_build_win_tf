@@ -1,4 +1,4 @@
-## link
+## link of build tensorflow c++ library
 - [official](https://tensorflow.google.cn/install/source)
 - [csdn](https://blog.csdn.net/qq_37674858/article/details/81095101)
 - [csdn](https://blog.csdn.net/luanpeng825485697/article/details/81152615)
@@ -22,25 +22,38 @@ bazel build --config=opt --config=cuda //tensorflow:libtensorflow.so
 
 ```
 
-## problem
+# problem
 
 ## config
 - monolithic meaning?
 
-### build pip package
+## build pip package
 - tf.Session() was failed
 
 
 
-# some problems in building AI applications in Linux
+# some problems in building AI library on Linux
 
-[eclipse c++11]
-- https://www.cnblogs.com/mcginn/p/5899275.html
-- https://blog.csdn.net/xinqingwuji/article/details/81019843
+## eclipse c++11 setting
+- [cnblog](https://www.cnblogs.com/mcginn/p/5899275.html)
+- [csdn](https://blog.csdn.net/xinqingwuji/article/details/81019843)
 
-[TensorBlock.h:393:35: error: parse error in template argument list]
-- https://stackoverflow.com/questions/36274171/missing-template-arguments-before/36275150#36275150
+## eclipse -fPIC setting
+- [csdn](https://blog.csdn.net/shenchen8274/article/details/7822822)
+- propertise->c/c++ build->settings->GCC **C++** Compiler->Command
 
-[recompile with -fPIC]
-- https://blog.csdn.net/shenchen8274/article/details/7822822
-- (propertise->c/c++ build->settings->GCC **C++** Compiler->Command)
+## TensorBlock.h:393:35: error: parse error in template argument list
+- [stackoverflow](https://stackoverflow.com/questions/36274171/missing-template-arguments-before/36275150#36275150)
+- DO NOT use "using namespace std;"
+
+## No session factory registered
+- [github/tensorflow](https://github.com/tensorflow/tensorflow/issues/3308#issuecomment-233799915)
+- [csdn](https://blog.csdn.net/wd1603926823/article/details/92843830)
+
+## cmake release or debug
+- [stackoverflow](https://stackoverflow.com/a/7725055/9873377)
+
+## cmake link dynamic and static lib
+- [csdn](https://blog.csdn.net/KYJL888/article/details/85109782)
+
+
