@@ -24,8 +24,11 @@ bazel build --config=opt --config=cuda //tensorflow:libtensorflow.so
 
 # problem
 
-## config
-- monolithic meaning?
+## --config=monolithic
+- build only **ONE** library `libtensorflow_cc.so`
+- [stackoverflow](https://stackoverflow.com/questions/53705582/what-is-meant-by-static-monolithic-build-when-building-tensorflow-from-source)
+- DO NOT use `--config=monolithic` unless you don't need custom op
+
 
 ## build pip package
 - tf.Session() was failed
@@ -55,5 +58,17 @@ bazel build --config=opt --config=cuda //tensorflow:libtensorflow.so
 
 ## cmake link dynamic and static lib
 - [csdn](https://blog.csdn.net/KYJL888/article/details/85109782)
+
+## cmake
+- [csdn, link lib](https://blog.csdn.net/KYJL888/article/details/85109782)
+
+
+# about custom op on Linux
+
+## -D_GLIBCXX_USE_CXX11_ABI=0
+- The binary pip packages available on the TensorFlow website are built with gcc4 that uses the older ABI. If you compile your op library with gcc>=5, add `-D_GLIBCXX_USE_CXX11_ABI=0` to the command line to make the library compatible with the older abi. [tensorflow](https://tensorflow.google.cn/guide/extend/op)
+	- compile simple custom op library `libzero_out.so` using gcc with pip package from tf website, `-D_GLIBCXX_USE_CXX11_ABI=0` need to be set.
+	- compile simple custom op library `libzero_out.so` using gcc with self-built pip package, DO NOT set D_GLIBCXX_USE_CXX11_ABI=0, and in this situation, c++ code can call the custom op library with `TF_LoadLibrary`
+
 
 
