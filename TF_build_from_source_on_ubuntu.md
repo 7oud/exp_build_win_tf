@@ -30,8 +30,8 @@ bazel build --config=opt --config=cuda //tensorflow:libtensorflow.so
 - DO NOT use `--config=monolithic` unless you don't need custom op
 
 
-## build pip package
-- tf.Session() was failed
+## build pip package succeed but `tf.Session()` failed
+- DO Not install built pip package in source code folder, install it in `~` is OK [Not Sure reason]
 
 
 
