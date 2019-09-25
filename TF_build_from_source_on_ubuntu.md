@@ -47,6 +47,7 @@ bazel build --config=opt --config=cuda //tensorflow:libtensorflow.so
 - **release or debug** [stackoverflow](https://stackoverflow.com/a/7725055/9873377)
 - **link dynamic and static lib** [csdn](https://blog.csdn.net/KYJL888/article/details/85109782)
 - **link lib** [csdn](https://blog.csdn.net/KYJL888/article/details/85109782)
+- **cmake cuda**[nvidia](https://devblogs.nvidia.com/building-cuda-applications-cmake/)
 
 ### TensorBlock.h:393:35: error: parse error in template argument list
 - [stackoverflow](https://stackoverflow.com/questions/36274171/missing-template-arguments-before/36275150#36275150)
