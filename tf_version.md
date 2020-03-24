@@ -64,6 +64,14 @@
 - `TensorRT 6.0` is supported and enabled by default
 - from v2.1.0, `contrib` folder was removed from src
 
+### 2.2.0
+- replace `std::string` with `tensorflow::tstring`, now ABI is stable
+- add a new `Profiler` of TF2, for CPU/GPU/TPU
+- export C++ using `pybind11`, SWIG is deprecated
+- add `SyncBatchNormalization` layer for multi-GPUs
+- **custom training logic** by overriding `Model.train_step`
+- XLA now builds and works on Windows
+
 
 ### To be built on Windows
 - tf 1.10.0, CUDA 9
